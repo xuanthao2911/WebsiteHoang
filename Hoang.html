@@ -6,158 +6,533 @@
 
     <title>Đột phá kinh tế Việt Nam thời kỳ Đổi mới</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js')</script>
-<style>
-:root{--red:#7a0f12;--red-d:#2b0709;--red-m:#a3161b;--gold:#d9a21b;--gold-l:#f3c94f;--ink:#2c2523;--mute:#6b605b;--bg:#faf8f6;--bg2:#f3eeea;--line:#e8dfd9;
---serif:'Playfair Display',Georgia,serif;--sans:'Be Vietnam Pro','Segoe UI',Arial,sans-serif;
---sh:0 10px 30px rgba(60,20,15,.10);--sh2:0 18px 45px rgba(60,20,15,.18)}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.75;font-size:16.5px;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-a:focus-visible,button:focus-visible{outline:3px solid var(--gold-l);outline-offset:3px}
-section{padding:110px 8%;scroll-margin-top:56px}
-section>*{max-width:1180px;margin-left:auto;margin-right:auto}
-/* NAV */
-nav{position:fixed;inset:0 0 auto 0;z-index:1000;background:rgba(43,7,9,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:.4s}
-nav.scrolled{background:rgba(43,7,9,.94);box-shadow:0 4px 24px rgba(0,0,0,.25)}
-nav ul{display:flex;justify-content:center;list-style:none;gap:6px;padding:0 12px}
-nav ul li a{position:relative;display:block;padding:17px 16px;color:#f6ece6;text-decoration:none;font-size:15px;font-weight:500;transition:color .3s}
-nav ul li a::after{content:'';position:absolute;left:16px;right:16px;bottom:10px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .35s}
-nav ul li a:hover,nav ul li a.active{color:var(--gold-l)}
-nav ul li a:hover::after,nav ul li a.active::after{transform:scaleX(1)}
-.progress{position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-l))}
-/* HERO */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:100px 8% 80px;overflow:hidden;isolation:isolate}
-.hero::before{content:'';position:absolute;inset:0;z-index:-2;background:url("https://images.unsplash.com/photo-1557750255-c76072a7aad1?auto=format&fit=crop&w=2000&q=80") center/cover,linear-gradient(135deg,#7a0f12,#2b0709);animation:zoom 22s ease-in-out infinite alternate}
-.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(122,15,18,.55),rgba(43,7,9,.92) 85%),linear-gradient(to bottom,transparent 70%,var(--bg))}
-.hero-content{max-width:960px;animation:fadeUp 1.4s cubic-bezier(.2,.7,.2,1) both}
-.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(38px,6.4vw,76px);line-height:1.12;margin-bottom:26px;text-shadow:0 4px 24px rgba(0,0,0,.5)}
-.hero h1::after{content:'';display:block;width:90px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--gold),var(--gold-l));margin:26px auto 0}
-.hero p{font-size:clamp(17px,2vw,21px);max-width:760px;margin:0 auto;color:#f5e9e2}
-.btn{display:inline-block;margin-top:38px;padding:15px 36px;background:linear-gradient(135deg,var(--gold),var(--gold-l));color:var(--red-d);border-radius:50px;text-decoration:none;font-weight:700;box-shadow:0 8px 24px rgba(217,162,27,.4);transition:.35s}
-.btn:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(217,162,27,.55)}
-.scroll-hint{position:absolute;bottom:28px;left:50%;width:26px;height:42px;border:2px solid rgba(255,255,255,.6);border-radius:20px;transform:translateX(-50%)}
-.scroll-hint::after{content:'';position:absolute;top:8px;left:50%;width:4px;height:8px;margin-left:-2px;border-radius:4px;background:#fff;animation:wheel 1.8s infinite}
-/* TITLES */
-.section-title{text-align:center;margin-bottom:60px}
-.section-title span{display:inline-block;padding:6px 18px;border-radius:30px;background:rgba(217,162,27,.16);color:var(--red-m);font-size:13px;font-weight:600;letter-spacing:.04em}
-.section-title h2{font-family:var(--serif);font-size:clamp(30px,4vw,44px);line-height:1.25;color:var(--red);margin:18px 0 14px}
-.section-title h2::after{content:'';display:block;width:64px;height:3px;border-radius:3px;background:var(--gold);margin:16px auto 0}
-.section-title p{max-width:720px;margin:0 auto;color:var(--mute)}
-/* INTRO */
-.intro,.breakthrough,.chart-section{background:#fff}
-.intro-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
-.intro-grid h2{font-family:var(--serif);font-size:clamp(26px,3vw,34px);color:var(--red);margin-bottom:16px}
-.highlight{margin-top:26px;padding:22px 24px;border-left:4px solid var(--gold);border-radius:0 14px 14px 0;background:linear-gradient(90deg,#fff3e2,#fffaf3)}
-.highlight strong{color:var(--red)}
-.intro-img{position:relative}
-.intro-img::before{content:'';position:absolute;inset:22px -22px -22px 22px;border:3px solid var(--gold);border-radius:20px;z-index:0}
-.intro img{position:relative;z-index:1;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:var(--sh2)}
-/* DIFFICULTIES */
-.difficulties,.achievements{background:var(--bg2)}
-.difficulty-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.difficulty-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--sh);transition:transform .45s,box-shadow .45s}
-.difficulty-card:hover{transform:translateY(-10px)!important;box-shadow:var(--sh2)}
-.difficulty-card .ph{overflow:hidden}
-.difficulty-card img{width:100%;height:200px;object-fit:cover;transition:transform .7s}
-.difficulty-card:hover img{transform:scale(1.1)}
-.difficulty-card h3{color:var(--red);font-size:18px;padding:20px 22px 6px}
-.difficulty-card p{padding:0 22px 24px;color:var(--mute);font-size:15px}
-/* TIMELINE */
-.timeline{position:relative;display:grid;grid-template-columns:1fr 1fr;column-gap:84px;row-gap:34px;max-width:1100px}
-.timeline::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:4px;margin-left:-2px;border-radius:4px;background:linear-gradient(to bottom,var(--gold),var(--red))}
-.timeline-item{position:relative}
-.timeline-item:nth-child(odd){grid-column:1}
-.timeline-item:nth-child(even){grid-column:2;margin-top:70px}
-.timeline-item::after{content:'';position:absolute;top:34px;width:20px;height:20px;border-radius:50%;background:#fff;border:5px solid var(--gold);box-shadow:0 0 0 6px rgba(217,162,27,.22)}
-.timeline-item:nth-child(odd)::after{right:-42px;transform:translateX(50%)}
-.timeline-item:nth-child(even)::after{left:-42px;transform:translateX(-50%)}
-.timeline-content{background:#fff;padding:22px;border-radius:18px;box-shadow:var(--sh);transition:.4s}
-.timeline-content:hover{transform:translateY(-6px);box-shadow:var(--sh2)}
-.timeline-content img{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:16px}
-.year{display:inline-block;padding:2px 14px;border-radius:20px;background:var(--red);color:var(--gold-l);font-size:15px;font-weight:700;margin-bottom:10px}
-.timeline-content h3{color:var(--red);font-size:20px;margin-bottom:6px}
-.timeline-content p{color:var(--mute);font-size:15px}
-/* CARDS */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.card{position:relative;background:var(--bg);padding:34px 30px;border-radius:18px;border:1px solid var(--line);overflow:hidden;transition:transform .4s,box-shadow .4s,border-color .4s}
-.card::before{content:'';position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--red),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .5s}
-.card:hover{transform:translateY(-8px)!important;box-shadow:var(--sh2);border-color:transparent;background:#fff}
-.card:hover::before{transform:scaleX(1)}
-.icon{display:grid;place-items:center;width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,#fff1d6,#ffe3b0);font-size:30px;margin-bottom:20px;transition:transform .4s}
-.card:hover .icon{transform:rotate(-8deg) scale(1.1)}
-.card h3{color:var(--red);font-size:19px;margin-bottom:8px}
-.card p{color:var(--mute);font-size:15px}
-/* STATS */
-.stats{background:linear-gradient(135deg,var(--red-d),var(--red) 60%,#8c1a1d);color:#fff;position:relative;overflow:hidden}
-.stats .section-title h2::after{background:var(--gold-l)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
-.stat{padding:12px 20px;border-left:1px solid rgba(255,255,255,.18)}
-.stat:first-child{border-left:0}
-.stat h3{font-family:var(--serif);font-size:clamp(38px,4.5vw,56px);color:var(--gold-l);line-height:1.2}
-.stat p{color:#f1ddd5;font-size:15px}
-/* CHART */
-.chart{position:relative;max-width:900px;height:400px;display:flex;justify-content:space-around;padding:30px 20px 0;border-bottom:2px solid var(--ink)}
-.chart-grid{position:absolute;left:0;right:0;top:30px;bottom:44px;background:linear-gradient(to top,var(--line) 1px,transparent 1px) 0 0/100% 20%;pointer-events:none}
-.bar-container{position:relative;height:100%;width:80px;display:flex;flex-direction:column}
-.bar-area{flex:1;display:flex;align-items:flex-end;justify-content:center}
-.bar{width:56px;height:0;border-radius:10px 10px 0 0;background:linear-gradient(to top,var(--red),var(--gold));box-shadow:0 6px 16px rgba(122,15,18,.25);transition:height 1.4s cubic-bezier(.2,.8,.2,1),filter .3s}
-.bar-container:hover .bar{filter:brightness(1.15) saturate(1.2)}
-.bar-label{height:44px;display:grid;place-items:center;font-weight:600;color:var(--red)}
-.chart-note{text-align:center;margin-top:26px;color:var(--mute);font-size:14px}
-/* ACHIEVEMENTS */
-.achievement-list{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.achievement{background:#fff;padding:28px 30px;border-radius:18px;border-left:5px solid var(--gold);box-shadow:var(--sh);transition:transform .4s,box-shadow .4s,border-color .4s}
-.achievement:hover{transform:translateY(-6px)!important;box-shadow:var(--sh2);border-color:var(--red)}
-.achievement h3{color:var(--red);font-size:19px;margin-bottom:8px}
-.achievement p{color:var(--mute);font-size:15px}
-/* FUTURE */
-.future{display:grid;place-items:center;text-align:center;color:#fff;padding:140px 8%;background:linear-gradient(rgba(43,7,9,.82),rgba(43,7,9,.82)),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80") center/cover fixed,#2b0709}
-.future-box{max-width:820px;padding:56px 48px;border:1px solid rgba(243,201,79,.45);border-radius:26px;background:rgba(255,255,255,.07);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.future h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,46px);margin-bottom:20px;color:var(--gold-l)}
-.future p{color:#f6e8e0;font-size:18px}
-.conclusion .section-title{margin-bottom:0}
-.conclusion .section-title p{max-width:820px;font-size:18px;color:var(--ink)}
-footer{background:var(--red-d);color:#d9c3ba;text-align:center;padding:40px 8%;font-size:14.5px;border-top:4px solid var(--gold)}
-footer p+p{margin-top:6px;color:#a38c83}
-.to-top{position:fixed;right:24px;bottom:24px;z-index:900;width:48px;height:48px;border:0;border-radius:50%;background:var(--gold);color:var(--red-d);font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.3);opacity:0;pointer-events:none;transform:translateY(16px);transition:.4s}
-.to-top.show{opacity:1;pointer-events:auto;transform:none}
-.to-top:hover{background:var(--gold-l)}
-/* MOTION */
-.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),box-shadow .45s}
-.js .timeline-item:nth-child(odd).reveal{transform:translateX(-50px)}
-.js .timeline-item:nth-child(even).reveal{transform:translateX(50px)}
-.js .reveal.active{opacity:1;transform:none}
-@keyframes fadeUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:none}}
-@keyframes zoom{to{transform:scale(1.12)}}
-@keyframes wheel{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(16px)}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.future{background-attachment:scroll}}
-/* RESPONSIVE */
-@media(max-width:1000px){
-.difficulty-grid{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr 1fr}
-.stats-grid{grid-template-columns:1fr 1fr;row-gap:20px}.stat:nth-child(3){border-left:0}
-.intro-grid{grid-template-columns:1fr;gap:56px}.intro-img::before{inset:16px -10px -16px 10px}
-.future{background-attachment:scroll}}
-@media(max-width:760px){
-section{padding:76px 6%}
-nav ul{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}nav ul li a{white-space:nowrap;padding:14px 12px;font-size:14px}
-.achievement-list{grid-template-columns:1fr}
-.timeline{grid-template-columns:1fr;column-gap:0;padding-left:38px}
-.timeline::before{left:12px;margin-left:0}
-.timeline-item:nth-child(odd),.timeline-item:nth-child(even){grid-column:1;margin-top:0}
-.timeline-item:nth-child(odd)::after,.timeline-item:nth-child(even)::after{left:-26px;right:auto;transform:translateX(-50%)}
-.js .timeline-item:nth-child(odd).reveal,.js .timeline-item:nth-child(even).reveal{transform:translateY(34px)}
-.js .timeline-item.reveal.active{transform:none}
-.chart{padding:30px 0 0}.bar-container{width:48px}.bar{width:34px}.bar-label{font-size:13px}
-.future-box{padding:40px 26px}}
-@media(max-width:560px){
-.difficulty-grid,.cards{grid-template-columns:1fr}
-.stat{padding:8px}.stat h3{font-size:34px}.stat p{font-size:13px}}
-</style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* ================= MENU ================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(120, 0, 0, 0.96);
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 18px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #e5a000;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            height: 100vh;
+            background:
+                linear-gradient(rgba(100,0,0,0.65), rgba(100,0,0,0.65)),
+                url("https://images.unsplash.com/photo-1557750255-c76072a7aad1?auto=format&fit=crop&w=2000&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            animation: fadeUp 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+            text-shadow: 2px 3px 5px black;
+        }
+
+        .hero p {
+            font-size: 21px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 28px;
+            background: #e5a000;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            background: #ffbd16;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #a00000;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #8b0000;
+            margin: 10px 0;
+        }
+
+        .section-title p {
+            max-width: 800px;
+            margin: auto;
+            color: #666;
+        }
+
+        /* ================= INTRO ================= */
+
+        .intro {
+            background: white;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .highlight {
+            border-left: 5px solid #c00000;
+            padding: 20px;
+            background: #fff4f4;
+            margin-top: 20px;
+        }
+
+        /* ================= KHÓ KHĂN ================= */
+
+        .difficulties {
+            background: #f1f1f1;
+        }
+
+        .difficulty-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .difficulty-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: 0.4s;
+        }
+
+        .difficulty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+        }
+
+        .difficulty-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .difficulty-card h3 {
+            color: #8b0000;
+            padding: 18px 18px 5px;
+        }
+
+        .difficulty-card p {
+            padding: 0 18px 20px;
+            color: #666;
+        }
+
+        /* ================= TIMELINE ================= */
+
+        .timeline {
+            position: relative;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            background: #a00000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.12);
+        }
+
+        .timeline-content img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .year {
+            color: #c00000;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* ================= ĐỘT PHÁ ================= */
+
+        .breakthrough {
+            background: white;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            border-top: 5px solid #a00000;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+            color: #8b0000;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* ================= STATS ================= */
+
+        .stats {
+            background: #8b0000;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 25px;
+        }
+
+        .stat h3 {
+            font-size: 45px;
+            color: #ffd45c;
+        }
+
+        /* ================= CHART ================= */
+
+        .chart-section {
+            background: white;
+        }
+
+        .chart {
+            max-width: 900px;
+            margin: auto;
+            height: 400px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            border-bottom: 2px solid #333;
+            padding: 30px 20px 0;
+        }
+
+        .bar-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            width: 80px;
+        }
+
+        .bar {
+            width: 55px;
+            background: linear-gradient(to top, #8b0000, #e5a000);
+            height: 0;
+            border-radius: 8px 8px 0 0;
+            transition: height 1.5s ease;
+        }
+
+        .bar-label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .chart-note {
+            text-align: center;
+            margin-top: 25px;
+            color: #777;
+            font-size: 14px;
+        }
+/* ================= ẢNH BIỂU ĐỒ KINH TẾ ================= */
+
+.economic-image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.economic-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+
+.economic-image img:hover {
+    transform: scale(1.02);
+}
+
+        /* ================= THÀNH TỰU ================= */
+
+        .achievements {
+            background: #f4f4f4;
+        }
+
+        .achievement-list {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .achievement {
+            background: white;
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #c00000;
+            transition: 0.3s;
+        }
+
+        .achievement:hover {
+            transform: translateX(8px);
+        }
+
+        .achievement h3 {
+            color: #8b0000;
+            margin-bottom: 8px;
+        }
+
+        /* ================= FUTURE ================= */
+
+        .future {
+            background:
+                linear-gradient(rgba(80,0,0,0.8), rgba(80,0,0,0.8)),
+                url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .future h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .future p {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #300000;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* ================= ANIMATION ================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 900px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .difficulty-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .timeline::after {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 55px;
+                padding-right: 10px;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .difficulty-grid,
+            .cards,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -165,7 +540,6 @@ nav ul{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}nav ul li
 <!-- ================= MENU ================= -->
 
 <nav>
-    <div class="progress"></div>
     <ul>
         <li><a href="#home">Trang chủ</a></li>
         <li><a href="#boi-canh">Bối cảnh</a></li>
@@ -198,7 +572,6 @@ nav ul{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}nav ul li
         </a>
 
     </div>
-    <div class="scroll-hint" aria-hidden="true"></div>
 
 </section>
 
@@ -248,9 +621,13 @@ nav ul{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}nav ul li
         </div>
 
 
-        <div class="intro-img"><img
-                src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20800%20600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23b3181d%22/%3E%3Cstop%20offset%3D%22.6%22%20stop-color%3D%22%237a0f12%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233a080b%22/%3E%3C/linearGradient%3E%3CradialGradient%20id%3D%22r%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f3c94f%22%20stop-opacity%3D%22.55%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f3c94f%22%20stop-opacity%3D%220%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22400%22%20cy%3D%22205%22%20r%3D%22250%22%20fill%3D%22url%28%23r%29%22/%3E%3Cg%20stroke%3D%22%23f3c94f%22%20stroke-opacity%3D%22.12%22%20stroke-width%3D%223%22%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%221100%22%20y2%3D%22205%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%221058%22%20y2%3D%22444%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22936%22%20y2%3D%22655%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22750%22%20y2%3D%22811%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22522%22%20y2%3D%22894%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22278%22%20y2%3D%22894%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%2250%22%20y2%3D%22811%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22-136%22%20y2%3D%22655%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22-258%22%20y2%3D%22444%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22-300%22%20y2%3D%22205%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22-258%22%20y2%3D%22-34%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22-136%22%20y2%3D%22-245%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%2250%22%20y2%3D%22-401%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22278%22%20y2%3D%22-484%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22522%22%20y2%3D%22-484%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22750%22%20y2%3D%22-401%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%22936%22%20y2%3D%22-245%22/%3E%3Cline%20x1%3D%22400%22%20y1%3D%22205%22%20x2%3D%221058%22%20y2%3D%22-34%22/%3E%3C/g%3E%3Cpolygon%20points%3D%22400%2C95%20428%2C170%20508%2C170%20443%2C218%20468%2C296%20400%2C248%20332%2C296%20357%2C218%20292%2C170%20372%2C170%22%20fill%3D%22%23f3c94f%22/%3E%3Crect%20x%3D%22-10%22%20y%3D%22412%22%20width%3D%2255%22%20height%3D%22188%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%2248%22%20y%3D%22389%22%20width%3D%2265%22%20height%3D%22211%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22117%22%20y%3D%22442%22%20width%3D%2245%22%20height%3D%22158%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22164%22%20y%3D%22380%22%20width%3D%2265%22%20height%3D%22220%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22235%22%20y%3D%22422%22%20width%3D%2243%22%20height%3D%22178%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22288%22%20y%3D%22404%22%20width%3D%2274%22%20height%3D%22196%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22368%22%20y%3D%22345%22%20width%3D%2251%22%20height%3D%22255%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22422%22%20y%3D%22423%22%20width%3D%2256%22%20height%3D%22177%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22480%22%20y%3D%22348%22%20width%3D%2256%22%20height%3D%22252%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22542%22%20y%3D%22429%22%20width%3D%2252%22%20height%3D%22171%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22600%22%20y%3D%22370%22%20width%3D%2258%22%20height%3D%22230%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22665%22%20y%3D%22342%22%20width%3D%2245%22%20height%3D%22258%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22717%22%20y%3D%22386%22%20width%3D%2264%22%20height%3D%22214%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22786%22%20y%3D%22419%22%20width%3D%2251%22%20height%3D%22181%22%20fill%3D%22%236e1014%22%20opacity%3D%220.9%22/%3E%3Crect%20x%3D%22-10%22%20y%3D%22489%22%20width%3D%2257%22%20height%3D%22111%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%2257%22%20y%3D%22500%22%20width%3D%2259%22%20height%3D%22100%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22122%22%20y%3D%22410%22%20width%3D%2276%22%20height%3D%22190%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22204%22%20y%3D%22476%22%20width%3D%2272%22%20height%3D%22124%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22284%22%20y%3D%22424%22%20width%3D%2267%22%20height%3D%22176%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22357%22%20y%3D%22443%22%20width%3D%2267%22%20height%3D%22157%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22428%22%20y%3D%22461%22%20width%3D%2254%22%20height%3D%22139%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22488%22%20y%3D%22490%22%20width%3D%2242%22%20height%3D%22110%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22532%22%20y%3D%22420%22%20width%3D%2269%22%20height%3D%22180%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22607%22%20y%3D%22432%22%20width%3D%2273%22%20height%3D%22168%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22689%22%20y%3D%22482%22%20width%3D%2261%22%20height%3D%22118%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22755%22%20y%3D%22448%22%20width%3D%2244%22%20height%3D%22152%22%20fill%3D%22%234a0b0e%22%20opacity%3D%220.95%22/%3E%3Crect%20x%3D%22-10%22%20y%3D%22484%22%20width%3D%2280%22%20height%3D%22116%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22-2%22%20y%3D%22498%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%2214%22%20y%3D%22498%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%2246%22%20y%3D%22498%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%2230%22%20y%3D%22520%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%2246%22%20y%3D%22520%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22-2%22%20y%3D%22542%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%2246%22%20y%3D%22542%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22-2%22%20y%3D%22564%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%2214%22%20y%3D%22564%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%2246%22%20y%3D%22564%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%2277%22%20y%3D%22499%22%20width%3D%2241%22%20height%3D%22101%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%2285%22%20y%3D%22513%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22101%22%20y%3D%22535%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22101%22%20y%3D%22579%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22123%22%20y%3D%22503%22%20width%3D%2268%22%20height%3D%2297%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22131%22%20y%3D%22517%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22147%22%20y%3D%22517%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22179%22%20y%3D%22517%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22131%22%20y%3D%22539%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22147%22%20y%3D%22539%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22163%22%20y%3D%22539%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22131%22%20y%3D%22561%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22147%22%20y%3D%22561%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22163%22%20y%3D%22561%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22131%22%20y%3D%22583%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22147%22%20y%3D%22583%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22163%22%20y%3D%22583%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22179%22%20y%3D%22583%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22195%22%20y%3D%22521%22%20width%3D%2278%22%20height%3D%2279%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22251%22%20y%3D%22535%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22203%22%20y%3D%22557%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22235%22%20y%3D%22557%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22219%22%20y%3D%22579%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22235%22%20y%3D%22579%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22251%22%20y%3D%22579%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22282%22%20y%3D%22512%22%20width%3D%2242%22%20height%3D%2288%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22290%22%20y%3D%22526%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22306%22%20y%3D%22526%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22306%22%20y%3D%22570%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22330%22%20y%3D%22509%22%20width%3D%2256%22%20height%3D%2291%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22370%22%20y%3D%22523%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22338%22%20y%3D%22545%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22354%22%20y%3D%22545%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22338%22%20y%3D%22567%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22354%22%20y%3D%22567%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22388%22%20y%3D%22491%22%20width%3D%2271%22%20height%3D%22109%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22396%22%20y%3D%22505%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22412%22%20y%3D%22505%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22412%22%20y%3D%22527%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22412%22%20y%3D%22571%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22462%22%20y%3D%22516%22%20width%3D%2257%22%20height%3D%2284%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22470%22%20y%3D%22530%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22502%22%20y%3D%22530%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22502%22%20y%3D%22552%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22470%22%20y%3D%22574%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22527%22%20y%3D%22513%22%20width%3D%2264%22%20height%3D%2287%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22551%22%20y%3D%22527%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22567%22%20y%3D%22527%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22551%22%20y%3D%22549%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22567%22%20y%3D%22549%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22551%22%20y%3D%22571%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22567%22%20y%3D%22571%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22593%22%20y%3D%22520%22%20width%3D%2252%22%20height%3D%2280%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22617%22%20y%3D%22534%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22601%22%20y%3D%22578%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22617%22%20y%3D%22578%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22654%22%20y%3D%22508%22%20width%3D%2275%22%20height%3D%2292%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22678%22%20y%3D%22522%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22694%22%20y%3D%22522%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22678%22%20y%3D%22544%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22662%22%20y%3D%22566%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22694%22%20y%3D%22566%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22662%22%20y%3D%22588%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22678%22%20y%3D%22588%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22732%22%20y%3D%22526%22%20width%3D%2244%22%20height%3D%2274%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22740%22%20y%3D%22562%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22740%22%20y%3D%22584%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22785%22%20y%3D%22515%22%20width%3D%2244%22%20height%3D%2285%22%20fill%3D%22%232b0709%22%20opacity%3D%221%22/%3E%3Crect%20x%3D%22809%22%20y%3D%22551%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Crect%20x%3D%22809%22%20y%3D%22573%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22%23f3c94f%22%20opacity%3D%22.75%22/%3E%3Cpolyline%20points%3D%2260%2C520%20190%2C470%20300%2C490%20430%2C400%20560%2C420%20700%2C300%22%20fill%3D%22none%22%20stroke%3D%22%23f3c94f%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Cpolygon%20points%3D%22720%2C278%20676%2C290%20706%2C322%22%20fill%3D%22%23f3c94f%22/%3E%3C/svg%3E"
-                alt="Việt Nam"></div>
+        <div>
+
+            <img
+              src="https://media.vov.vn/sites/default/files/styles/large/public/2026-01/doi_moi_dai_hoi_lan_thu_vi_cua_dang.jpg"
+                alt="Việt Nam">
+
+        </div>
 
     </div>
 
@@ -268,7 +645,7 @@ nav ul{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}nav ul li
         <h2>Những khó khăn trước Đổi mới</h2>
 
         <p>
-            Nền kinh tế Việt Nam trước năm 1986 phải đối mặt
+            Việt Nam trước năm 1986 phải đối mặt
             với nhiều vấn đề nghiêm trọng.
         </p>
 
@@ -282,15 +659,14 @@ nav ul{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}nav ul li
 
         <div class="difficulty-card reveal">
 
-            <div class="ph"><img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48cmVjdCB4PSIxOTAiIHk9IjE5MCIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIxMCIgcng9IjMiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIxOTAiIHk9IjI3MCIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIxMCIgcng9IjMiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIxOTAiIHk9IjM1MCIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIxMCIgcng9IjMiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIyMTAiIHk9IjE0MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iNCIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjI3OCIgeT0iMTU1IiB3aWR0aD0iMzYiIGhlaWdodD0iMzUiIHJ4PSI0IiBmaWxsPSIjZmRmMGQ1IiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNTQ4IiB5PSIxNTAiIHdpZHRoPSI0NiIgaGVpZ2h0PSI0MCIgcng9IjQiIGZpbGw9IiNmZGYwZDUiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIyMzIiIHk9IjIyOCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQyIiByeD0iNCIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=900&q=80"
-                alt="Khan hiếm hàng hóa"></div>
+            <img
+                src="https://cdn.nbtv.vn/upload/news/1_2020/2_14564105012020.jpg"
+                alt="Đời sống xã hội thời bao cấp">
 
-            <h3>Khan hiếm hàng hóa</h3>
+            <h3>ĐỜI SỐNG XÃ HỘI </h3>
 
             <p>
-                Sản xuất còn hạn chế, nhiều mặt hàng thiết yếu
-                chưa đáp ứng được nhu cầu của người dân.
+                Xã hội Việt Nam gần như không giao lưu với phương Tây vì tư tưởng và vấn đề an ninh. Xã hội ít có sự phân hóa giàu nghèo như hiện nay nhưng mức sống của người dân thấp. Tất cả sinh viên ra trường đều được nhà nước phân công công việc nên không lo thất nghiệp nhưng không được tự chọn cơ quan làm việc cho mình. Thi đậu đại học thời đó rất khó, ngoài học lực, tiêu chuẩn cao và xét cả lý lịch. Xã hội có tính cộng đồng cao, sống có người làng nghĩa xóm thân thiết, tối lửa tắt đèn có nhau. Đời sống tinh thần không có nhiều loại hình giải trí, cuộc sống bình ann hưng còn nghèo nàn, khó khăn.
             </p>
 
         </div>
@@ -300,15 +676,14 @@ src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fi
 
         <div class="difficulty-card reveal">
 
-            <div class="ph"><img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgtOCA0MDAgMjUwKSI+PHJlY3QgeD0iMjUwIiB5PSIxMjUiIHdpZHRoPSIzMDAiIGhlaWdodD0iMjUwIiByeD0iMTQiIGZpbGw9IiNmZGYwZDUiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIyNTAiIHk9IjEyNSIgd2lkdGg9IjMwMCIgaGVpZ2h0PSI1NiIgcng9IjE0IiBmaWxsPSIjN2EwZjEyIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMjUwIiB5PSIxNjAiIHdpZHRoPSIzMDAiIGhlaWdodD0iMjEiIHJ4PSIwIiBmaWxsPSIjN2EwZjEyIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMjgwIiB5PSIyMDUiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSIjN2EwZjEyIiBvcGFjaXR5PSIwLjQ1Ii8+PHJlY3QgeD0iMjgwIiB5PSIyMzUiIHdpZHRoPSIxNjAiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSIjN2EwZjEyIiBvcGFjaXR5PSIwLjQ1Ii8+PHJlY3QgeD0iMjgwIiB5PSIyNjUiIHdpZHRoPSIyMjAiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSIjN2EwZjEyIiBvcGFjaXR5PSIwLjQ1Ii8+PGNpcmNsZSBjeD0iNDkwIiBjeT0iMzMwIiByPSIzNCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjQ5MCIgY3k9IjMzMCIgcj0iMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YzYzk0ZiIgc3Ryb2tlLXdpZHRoPSI3Ii8+PHBvbHlnb24gcG9pbnRzPSI0OTAsMzEyIDQ5NCwzMjQgNTA3LDMyNCA0OTcsMzMyIDUwMSwzNDUgNDkwLDMzNyA0NzksMzQ1IDQ4MywzMzIgNDczLDMyNCA0ODYsMzI0IiBmaWxsPSIjZjNjOTRmIi8+PC9nPjwvc3ZnPg==') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80"
-                alt="Cơ chế bao cấp"></div>
+            <img
+                src="https://cdnphoto.dantri.com.vn/HMHek7T0xPaets4fAMQhRqsANxc=/2025/09/04/bac-ho-tham-lop-hocttxvn-cropped-1756977782297.jpg"
+                alt="GIÁO DỤC">
 
-            <h3>Cơ chế bao cấp</h3>
+            <h3>GIÁO DỤC </h3>
 
             <p>
-                Cơ chế quản lý tập trung, quan liêu, bao cấp
-                làm hạn chế động lực phát triển sản xuất.
+                Giáo dục được phổ thông đại trà tới các xã phường với trường cấp 1,2 và mẫu giáo. Công tác bổ túc văn hóa, xóa mù chữ trong độ tuổi đi học cho người dân. Có trường bổ túc văn hóa cho cán bộ cơ sở.Từ năm 1981, học phổ thông gồm 11 năm, trong đó thêm lớp 5, áp dụng cho khu vực miền Bắc. Từ 11 năm sang 12 năm, thêm lớp 9 bắt đầu từ năm 1992– 1993, áp dụng ở miền Bắc.
             </p>
 
         </div>
@@ -318,15 +693,15 @@ src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=c
 
         <div class="difficulty-card reveal">
 
-            <div class="ph"><img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48cmVjdCB4PSIzOTQiIHk9IjEzMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjIzMCIgcng9IjUiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIzMzAiIHk9IjM1MiIgd2lkdGg9IjE0MCIgaGVpZ2h0PSIxNiIgcng9IjYiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMTAgNDAwIDE1MCkiPjxyZWN0IHg9IjIyOCIgeT0iMTQ0IiB3aWR0aD0iMzQ0IiBoZWlnaHQ9IjEyIiByeD0iNiIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMSIvPjwvZz48Y2lyY2xlIGN4PSI0MDAiIGN5PSIxNDAiIHI9IjE2IiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGxpbmUgeDE9IjIzMyIgeTE9IjE4MCIgeDI9IjE5MiIgeTI9IjI2MiIgc3Ryb2tlPSIjZmRmMGQ1IiBzdHJva2Utd2lkdGg9IjQiLz48bGluZSB4MT0iMjMzIiB5MT0iMTgwIiB4Mj0iMjc0IiB5Mj0iMjYyIiBzdHJva2U9IiNmZGYwZDUiIHN0cm9rZS13aWR0aD0iNCIvPjxsaW5lIHgxPSI1NjciIHkxPSIxMjAiIHgyPSI1MjciIHkyPSIyMDIiIHN0cm9rZT0iI2ZkZjBkNSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PGxpbmUgeDE9IjU2NyIgeTE9IjEyMCIgeDI9IjYwOSIgeTI9IjIwMiIgc3Ryb2tlPSIjZmRmMGQ1IiBzdHJva2Utd2lkdGg9IjQiLz48cGF0aCBkPSJNMTg2IDI2Mmg5MmE0NiAzMCAwIDAgMSAtOTIgMHoiIGZpbGw9IiNmM2M5NGYiLz48cGF0aCBkPSJNNTIxIDIwMmg5MmE0NiAzMCAwIDAgMSAtOTIgMHoiIGZpbGw9IiNmM2M5NGYiLz48cmVjdCB4PSIxOTYiIHk9IjIyMiIgd2lkdGg9IjM0IiBoZWlnaHQ9IjQwIiByeD0iNCIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjIzNiIgeT0iMjMyIiB3aWR0aD0iMzQiIGhlaWdodD0iMzAiIHJ4PSI0IiBmaWxsPSIjZmRmMGQ1IiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNTUyIiB5PSIxNzgiIHdpZHRoPSIzMCIgaGVpZ2h0PSIyNCIgcng9IjQiIGZpbGw9IiNmZGYwZDUiIG9wYWNpdHk9IjEiLz48L3N2Zz4=') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=900&q=80"
-                alt="Khó khăn kinh tế"></div>
+            <img
+                src="https://cdn-images.vtv.vn/66349b6076cb4dee98746cf1/2026/02/18/screenshot-2026-02-18-205056-30485768529703522024988.png"
+                alt="Khó khăn kinh tế">
 
-            <h3>Mất cân đối kinh tế</h3>
+            <h3> KINH TẾ </h3>
 
             <p>
-                Nền kinh tế tồn tại nhiều mất cân đối,
-                sản xuất và lưu thông hàng hóa gặp nhiều khó khăn.
+                Quan hệ hàng hóa - tiền tệ chỉ là hình thức, quan hệ hiện vật là chủ yếu
+Nhà nước quản lý kinh tế thông qua chế độ "cấp phát - giao nộp". Vì vậy, rất nhiều hàng hóa quan trọng như sức lao động, phát minh sáng chế, tư liệu sản xuất quan trọng không được coi là hàng hóa về mặt pháp lý.
             </p>
 
         </div>
@@ -336,15 +711,15 @@ src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fi
 
         <div class="difficulty-card reveal">
 
-            <div class="ph"><img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48cG9seWdvbiBwb2ludHM9IjI2MCwyMzUgNDAwLDEzNSA1NDAsMjM1IiBmaWxsPSIjZjNjOTRmIi8+PHJlY3QgeD0iMjkwIiB5PSIyMzUiIHdpZHRoPSIyMjAiIGhlaWdodD0iMTI1IiByeD0iNCIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjMyNSIgeT0iMjY1IiB3aWR0aD0iNjQiIGhlaWdodD0iNTYiIHJ4PSI0IiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMzU1IiB5PSIyNjUiIHdpZHRoPSI0IiBoZWlnaHQ9IjU2IiByeD0iMCIgZmlsbD0iIzdhMGYxMiIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjMyNSIgeT0iMjkwIiB3aWR0aD0iNjQiIGhlaWdodD0iNCIgcng9IjAiIGZpbGw9IiM3YTBmMTIiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSI0MzAiIHk9IjI5MCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjcwIiByeD0iNCIgZmlsbD0iIzdhMGYxMiIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjIxMCIgeT0iMzYwIiB3aWR0aD0iMzgwIiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PC9zdmc+') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=80"
-                alt="Đời sống nhân dân"></div>
+            <img
+                src="https://t.cmx-cdn.com/songdep.com.vn/files/thunga/2021/11/12/chuyen-chua-ke-ve-y-te-thoi-bao-cap-0-162115.jpg"
+                alt="Y TẾ">
 
-            <h3>Đời sống khó khăn</h3>
+            <h3>Y TẾ</h3>
 
             <p>
-                Đời sống vật chất của một bộ phận nhân dân
-                còn nhiều thiếu thốn.
+                Về mặt y tế, người dân không mất tiền khám chữa bệnh nhưng điều kiện còn nhiều thiếu thốn. Người dân đi khám chữ bệnh, mua thuốc sau đó mang hóa đơn về cơ quan hay bệnh viên thanh toán. Nhà nước viện trợ trang thiết bị ytế, thuốc men.... Bệnh viện cũng được Bộ y tế phân chỉ tiêu để thực hiện.
+Trước tình hình trì trệ, khủng khoảng của kinh tế và bối cảnh các nước xã hội chủ nghĩa lâm nguy, Việt Nam thực hiện công cuộc đổi mới toàn diện trên phạm vi cả nước, theo hướng kinh tế thị trường có sự định hướng xã hộichủ nghĩa.
             </p>
 
         </div>
@@ -382,8 +757,8 @@ src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fi
 
             <div class="timeline-content">
 
-                <img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48cG9seWdvbiBwb2ludHM9IjIzMCwyMDUgNDAwLDEyOCA1NzAsMjA1IiBmaWxsPSIjZmRmMGQ1Ii8+PHBvbHlnb24gcG9pbnRzPSI0MDAsMTU5IDQwNiwxNzUgNDIzLDE3NiA0MDksMTg2IDQxNCwyMDIgNDAwLDE5MyAzODYsMjAyIDM5MSwxODYgMzc3LDE3NiAzOTQsMTc1IiBmaWxsPSIjZjNjOTRmIi8+PHJlY3QgeD0iMjYyIiB5PSIyMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxMjUiIHJ4PSIzIiBmaWxsPSIjZmRmMGQ1IiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMzI4IiB5PSIyMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxMjUiIHJ4PSIzIiBmaWxsPSIjZmRmMGQ1IiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMzk0IiB5PSIyMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxMjUiIHJ4PSIzIiBmaWxsPSIjZmRmMGQ1IiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNDYwIiB5PSIyMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxMjUiIHJ4PSIzIiBmaWxsPSIjZmRmMGQ1IiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNTI2IiB5PSIyMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxMjUiIHJ4PSIzIiBmaWxsPSIjZmRmMGQ1IiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMjMwIiB5PSIzNDAiIHdpZHRoPSIzNDAiIGhlaWdodD0iMjIiIHJ4PSIzIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMjA4IiB5PSIzNjIiIHdpZHRoPSIzODQiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PC9zdmc+') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1000&q=80"
+                <img
+                    src="https://file3.qdnd.vn/data/images/0/2025/01/29/upload_2176/dhv.jpg?dpi=150&quality=100&w=870"
                     alt="Đại hội VI">
 
                 <div class="year">1986</div>
@@ -407,8 +782,8 @@ src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fi
 
             <div class="timeline-content">
 
-                <img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48ZWxsaXBzZSBjeD0iMzAwIiBjeT0iMzUwIiByeD0iNTgiIHJ5PSIxNyIgZmlsbD0iI2YzYzk0ZiIgc3Ryb2tlPSIjN2EwZjEyIiBzdHJva2Utd2lkdGg9IjQiLz48ZWxsaXBzZSBjeD0iMzAwIiBjeT0iMzIyIiByeD0iNTgiIHJ5PSIxNyIgZmlsbD0iI2YzYzk0ZiIgc3Ryb2tlPSIjN2EwZjEyIiBzdHJva2Utd2lkdGg9IjQiLz48ZWxsaXBzZSBjeD0iMzAwIiBjeT0iMjk0IiByeD0iNTgiIHJ5PSIxNyIgZmlsbD0iI2YzYzk0ZiIgc3Ryb2tlPSIjN2EwZjEyIiBzdHJva2Utd2lkdGg9IjQiLz48ZWxsaXBzZSBjeD0iMzAwIiBjeT0iMjY2IiByeD0iNTgiIHJ5PSIxNyIgZmlsbD0iI2YzYzk0ZiIgc3Ryb2tlPSIjN2EwZjEyIiBzdHJva2Utd2lkdGg9IjQiLz48ZWxsaXBzZSBjeD0iMzAwIiBjeT0iMjM4IiByeD0iNTgiIHJ5PSIxNyIgZmlsbD0iI2YzYzk0ZiIgc3Ryb2tlPSIjN2EwZjEyIiBzdHJva2Utd2lkdGg9IjQiLz48cmVjdCB4PSI0MzAiIHk9IjI4MCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjcwIiByeD0iNiIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjQ5MiIgeT0iMjI1IiB3aWR0aD0iNDgiIGhlaWdodD0iMTI1IiByeD0iNiIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjU1NCIgeT0iMTY1IiB3aWR0aD0iNDgiIGhlaWdodD0iMTg1IiByeD0iNiIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjQyMCIgeT0iMzUyIiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PC9zdmc+') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=1000&q=80"
+                <img
+                    src="https://www.quanlynhanuoc.vn/wp-content/uploads/2025/06/kinhte4_boqe.jpg"
                     alt="Phát triển kinh tế">
 
                 <div class="year">1991</div>
@@ -432,8 +807,8 @@ src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fi
 
             <div class="timeline-content">
 
-                <img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48Y2lyY2xlIGN4PSI0MDAiIGN5PSIyNTAiIHI9IjEwNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmRmMGQ1IiBzdHJva2Utd2lkdGg9IjgiLz48ZWxsaXBzZSBjeD0iNDAwIiBjeT0iMjUwIiByeD0iNDUiIHJ5PSIxMDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZkZjBkNSIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZD0iTTI5NSAyNTBINTA1TTMxMiAxOTBINDg4TTMxMiAzMTBINDg4IiBzdHJva2U9IiNmZGYwZDUiIHN0cm9rZS13aWR0aD0iNiIvPjxjaXJjbGUgY3g9IjQwMC4wIiBjeT0iMTA4LjAiIHI9IjExIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iNDgzLjQ2NTUwNTgyNTUzMTIiIGN5PSIxMzUuMTE5NTg2Nzk4NzU3NDciIHI9IjExIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iNTM1LjA1MDAyNTMxMzkxMTgiIGN5PSIyMDYuMTE5NTg2Nzk4NzU3NDciIHI9IjExIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iNTM1LjA1MDAyNTMxMzkxMTkiIGN5PSIyOTMuODgwNDEzMjAxMjQyNSIgcj0iMTEiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48Y2lyY2xlIGN4PSI0ODMuNDY1NTA1ODI1NTMxMiIgY3k9IjM2NC44ODA0MTMyMDEyNDI1IiByPSIxMSIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjQwMC4wIiBjeT0iMzkyLjAiIHI9IjExIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMzE2LjUzNDQ5NDE3NDQ2ODgiIGN5PSIzNjQuODgwNDEzMjAxMjQyNTYiIHI9IjExIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMjY0Ljk0OTk3NDY4NjA4ODI0IiBjeT0iMjkzLjg4MDQxMzIwMTI0MjU2IiByPSIxMSIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjI2NC45NDk5NzQ2ODYwODgyIiBjeT0iMjA2LjExOTU4Njc5ODc1NzUiIHI9IjExIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMzE2LjUzNDQ5NDE3NDQ2ODgiIGN5PSIxMzUuMTE5NTg2Nzk4NzU3NSIgcj0iMTEiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48L3N2Zz4=') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80"
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDwieYhS5jiT9EGUpQMbZnOdrUEz3FbnmQ4OZqDsa6EdPUiMP6J8NBVgAA&s=10"
                     alt="Hội nhập">
 
                 <div class="year">1995</div>
@@ -457,8 +832,8 @@ src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fi
 
             <div class="timeline-content">
 
-                <img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48bGluZSB4MT0iNDAwIiB5MT0iMjUwIiB4Mj0iNDAwIiB5Mj0iMTMwIiBzdHJva2U9IiNmZGYwZDUiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjgiLz48bGluZSB4MT0iNDAwIiB5MT0iMjUwIiB4Mj0iNTEzIiB5Mj0iMTkwIiBzdHJva2U9IiNmZGYwZDUiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjgiLz48bGluZSB4MT0iNDAwIiB5MT0iMjUwIiB4Mj0iNTEzIiB5Mj0iMzEwIiBzdHJva2U9IiNmZGYwZDUiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjgiLz48bGluZSB4MT0iNDAwIiB5MT0iMjUwIiB4Mj0iNDAwIiB5Mj0iMzcwIiBzdHJva2U9IiNmZGYwZDUiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjgiLz48bGluZSB4MT0iNDAwIiB5MT0iMjUwIiB4Mj0iMjg3IiB5Mj0iMzEwIiBzdHJva2U9IiNmZGYwZDUiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjgiLz48bGluZSB4MT0iNDAwIiB5MT0iMjUwIiB4Mj0iMjg3IiB5Mj0iMTkwIiBzdHJva2U9IiNmZGYwZDUiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjgiLz48bGluZSB4MT0iNDAwIiB5MT0iMTMwIiB4Mj0iNTEzIiB5Mj0iMTkwIiBzdHJva2U9IiNmM2M5NGYiIHN0cm9rZS13aWR0aD0iNCIgb3BhY2l0eT0iLjciLz48bGluZSB4MT0iNTEzIiB5MT0iMTkwIiB4Mj0iNTEzIiB5Mj0iMzEwIiBzdHJva2U9IiNmM2M5NGYiIHN0cm9rZS13aWR0aD0iNCIgb3BhY2l0eT0iLjciLz48bGluZSB4MT0iNTEzIiB5MT0iMzEwIiB4Mj0iNDAwIiB5Mj0iMzcwIiBzdHJva2U9IiNmM2M5NGYiIHN0cm9rZS13aWR0aD0iNCIgb3BhY2l0eT0iLjciLz48bGluZSB4MT0iNDAwIiB5MT0iMzcwIiB4Mj0iMjg3IiB5Mj0iMzEwIiBzdHJva2U9IiNmM2M5NGYiIHN0cm9rZS13aWR0aD0iNCIgb3BhY2l0eT0iLjciLz48bGluZSB4MT0iMjg3IiB5MT0iMzEwIiB4Mj0iMjg3IiB5Mj0iMTkwIiBzdHJva2U9IiNmM2M5NGYiIHN0cm9rZS13aWR0aD0iNCIgb3BhY2l0eT0iLjciLz48bGluZSB4MT0iMjg3IiB5MT0iMTkwIiB4Mj0iNDAwIiB5Mj0iMTMwIiBzdHJva2U9IiNmM2M5NGYiIHN0cm9rZS13aWR0aD0iNCIgb3BhY2l0eT0iLjciLz48Y2lyY2xlIGN4PSI0MDAuMCIgY3k9IjEzMC4wIiByPSIyMCIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjUxMi41ODMzMDI0OTE5NzcxIiBjeT0iMTkwLjAiIHI9IjIwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iNTEyLjU4MzMwMjQ5MTk3NzEiIGN5PSIzMTAuMCIgcj0iMjAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48Y2lyY2xlIGN4PSI0MDAuMCIgY3k9IjM3MC4wIiByPSIyMCIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjI4Ny40MTY2OTc1MDgwMjMiIGN5PSIzMTAuMDAwMDAwMDAwMDAwMDYiIHI9IjIwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMjg3LjQxNjY5NzUwODAyMyIgY3k9IjE5MC4wIiByPSIyMCIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjI1MCIgcj0iMzgiIGZpbGw9IiNmZGYwZDUiIG9wYWNpdHk9IjEiLz48cG9seWdvbiBwb2ludHM9IjQwMCwyMjYgNDA2LDI0MiA0MjMsMjQzIDQwOSwyNTMgNDE0LDI2OSA0MDAsMjYwIDM4NiwyNjkgMzkxLDI1MyAzNzcsMjQzIDM5NCwyNDIiIGZpbGw9IiM3YTBmMTIiLz48L3N2Zz4=') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80"
+                <img
+                    src="https://media.baodautu.vn/Images/manhcuong/2018/02/16/ngoai-nhin-cam-van-huong-toi-hoi-nhap1518750792.jpg"
                     alt="Kinh tế quốc tế">
 
                 <div class="year">2007</div>
@@ -482,8 +857,8 @@ src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fi
 
             <div class="timeline-content">
 
-                <img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48cmVjdCB4PSIyMjAiIHk9IjMwMCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSI2MCIgcng9IjQiIGZpbGw9IiNmZGYwZDUiIG9wYWNpdHk9IjEiLz48cGF0aCBkPSJNMjIwIDMwMFYyNDVMMjkwIDI4OFYyNDVMMzYwIDI4OFYyNDVMNDMwIDI4OFYzMDBaIiBmaWxsPSIjZmRmMGQ1Ii8+PHJlY3QgeD0iNDY1IiB5PSIxNjUiIHdpZHRoPSIzOCIgaGVpZ2h0PSIxMzUiIHJ4PSI0IiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNTE4IiB5PSIyMDUiIHdpZHRoPSIzMCIgaGVpZ2h0PSI5NSIgcng9IjQiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48Y2lyY2xlIGN4PSI0ODYiIGN5PSIxNDAiIHI9IjIwIiBmaWxsPSIjZmRmMGQ1IiBvcGFjaXR5PSIwLjU1Ii8+PGNpcmNsZSBjeD0iNTEyIiBjeT0iMTA4IiByPSIxNSIgZmlsbD0iI2ZkZjBkNSIgb3BhY2l0eT0iMC40Ii8+PHJlY3QgeD0iMjQ1IiB5PSIzMTgiIHdpZHRoPSI0NCIgaGVpZ2h0PSIyNiIgcng9IjMiIGZpbGw9IiM3YTBmMTIiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIzMjUiIHk9IjMxOCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjI2IiByeD0iMyIgZmlsbD0iIzdhMGYxMiIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjQwNSIgeT0iMzE4IiB3aWR0aD0iNDQiIGhlaWdodD0iMjYiIHJ4PSIzIiBmaWxsPSIjN2EwZjEyIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNDg1IiB5PSIzMTgiIHdpZHRoPSI0NCIgaGVpZ2h0PSIyNiIgcng9IjMiIGZpbGw9IiM3YTBmMTIiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIyMDAiIHk9IjM2MCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIxMCIgcng9IjQiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48L3N2Zz4=') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+                <img
+                    src="https://thoibaotaichinhvietnam.vn/stores/news_dataimages/thoibaotaichinhvietnamvn/012021/19/11/infographics-dau-an-phat-trien-kinh-te-viet-nam-giai-doan-2011-2020-30-.0818.jpg"
                     alt="Phát triển doanh nghiệp">
 
                 <div class="year">2011–2020</div>
@@ -507,8 +882,8 @@ src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=c
 
             <div class="timeline-content">
 
-                <img style="background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMzE4MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYTA4MGIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjYwIiByPSIyMDAiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjAuMTQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjQ2MCIgcj0iMTcwIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIwLjEiLz48cmVjdCB4PSIyOTAiIHk9IjE5MCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjgiIHJ4PSIzIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNDgwIiB5PSIxOTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSI4IiByeD0iMyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjM1MiIgeT0iMTQwIiB3aWR0aD0iOCIgaGVpZ2h0PSIzMCIgcng9IjMiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIzNTIiIHk9IjMzMCIgd2lkdGg9IjgiIGhlaWdodD0iMzAiIHJ4PSIzIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMjkwIiB5PSIyMjQiIHdpZHRoPSIzMCIgaGVpZ2h0PSI4IiByeD0iMyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjQ4MCIgeT0iMjI0IiB3aWR0aD0iMzAiIGhlaWdodD0iOCIgcng9IjMiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIzODYiIHk9IjE0MCIgd2lkdGg9IjgiIGhlaWdodD0iMzAiIHJ4PSIzIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMzg2IiB5PSIzMzAiIHdpZHRoPSI4IiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjI5MCIgeT0iMjU4IiB3aWR0aD0iMzAiIGhlaWdodD0iOCIgcng9IjMiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSI0ODAiIHk9IjI1OCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjgiIHJ4PSIzIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNDIwIiB5PSIxNDAiIHdpZHRoPSI4IiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjQyMCIgeT0iMzMwIiB3aWR0aD0iOCIgaGVpZ2h0PSIzMCIgcng9IjMiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIyOTAiIHk9IjI5MiIgd2lkdGg9IjMwIiBoZWlnaHQ9IjgiIHJ4PSIzIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iNDgwIiB5PSIyOTIiIHdpZHRoPSIzMCIgaGVpZ2h0PSI4IiByeD0iMyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxyZWN0IHg9IjQ1NCIgeT0iMTQwIiB3aWR0aD0iOCIgaGVpZ2h0PSIzMCIgcng9IjMiIGZpbGw9IiNmM2M5NGYiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSI0NTQiIHk9IjMzMCIgd2lkdGg9IjgiIGhlaWdodD0iMzAiIHJ4PSIzIiBmaWxsPSIjZjNjOTRmIiBvcGFjaXR5PSIxIi8+PHJlY3QgeD0iMzIwIiB5PSIxNzAiIHdpZHRoPSIxNjAiIGhlaWdodD0iMTYwIiByeD0iMTgiIGZpbGw9IiNmZGYwZDUiIG9wYWNpdHk9IjEiLz48cmVjdCB4PSIzNTAiIHk9IjIwMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIxMCIgZmlsbD0iIzdhMGYxMiIgb3BhY2l0eT0iMSIvPjxwYXRoIGQ9Ik00MDAgMjg1QzM3MiAyNjIgMzc4IDIzMCA0MTAgMjE4IDQzNiAyMzIgNDM2IDI2MiA0MDAgMjg1WiIgZmlsbD0iI2YzYzk0ZiIvPjxjaXJjbGUgY3g9IjI1MiIgY3k9IjE5NCIgcj0iNyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjI1MiIgY3k9IjI2MiIgcj0iNyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjU0OCIgY3k9IjIyOCIgcj0iNyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjU0OCIgY3k9IjI5NiIgcj0iNyIgZmlsbD0iI2YzYzk0ZiIgb3BhY2l0eT0iMSIvPjxsaW5lIHgxPSIyNjAiIHkxPSIxOTQiIHgyPSIyOTAiIHkyPSIxOTQiIHN0cm9rZT0iI2YzYzk0ZiIgc3Ryb2tlLXdpZHRoPSI0IiBvcGFjaXR5PSIuNyIvPjxsaW5lIHgxPSIyNjAiIHkxPSIyNjIiIHgyPSIyOTAiIHkyPSIyNjIiIHN0cm9rZT0iI2YzYzk0ZiIgc3Ryb2tlLXdpZHRoPSI0IiBvcGFjaXR5PSIuNyIvPjxsaW5lIHgxPSI1MTAiIHkxPSIyMjgiIHgyPSI1NDAiIHkyPSIyMjgiIHN0cm9rZT0iI2YzYzk0ZiIgc3Ryb2tlLXdpZHRoPSI0IiBvcGFjaXR5PSIuNyIvPjxsaW5lIHgxPSI1MTAiIHkxPSIyOTYiIHgyPSI1NDAiIHkyPSIyOTYiIHN0cm9rZT0iI2YzYzk0ZiIgc3Ryb2tlLXdpZHRoPSI0IiBvcGFjaXR5PSIuNyIvPjwvc3ZnPg==') center/cover no-repeat"
-src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
+                <img
+                    src="https://img.baoninhbinh.org.vn/static_files/DuyHan/images/2026/01/12/kt-vietnam-6f0d.jpeg"
                     alt="Chuyển đổi số">
 
                 <div class="year">2021–nay</div>
@@ -647,7 +1022,7 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
 
 <section class="stats">
 
-    <div class="section-title reveal">
+    <div class="section-title">
 
         <span style="color:#ffd45c">
             NHỮNG DẤU MỐC
@@ -663,7 +1038,7 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
     <div class="stats-grid">
 
 
-        <div class="stat reveal">
+        <div class="stat">
 
             <h3 class="counter" data-target="1986">
                 0
@@ -676,7 +1051,7 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
         </div>
 
 
-        <div class="stat reveal">
+        <div class="stat">
 
             <h3 class="counter" data-target="1995">
                 0
@@ -689,7 +1064,7 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
         </div>
 
 
-        <div class="stat reveal">
+        <div class="stat">
 
             <h3 class="counter" data-target="2007">
                 0
@@ -702,7 +1077,7 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
         </div>
 
 
-        <div class="stat reveal">
+        <div class="stat">
 
             <h3>
                 40+
@@ -728,80 +1103,23 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
 
         <span>05 — MINH HỌA</span>
 
-        <h2>Quá trình phát triển kinh tế</h2>
+        <h2>Quá trình phát triển kinh tế Việt Nam</h2>
 
         <p>
-            Biểu đồ minh họa mức độ phát triển qua các giai đoạn.
+            Một số chỉ tiêu kinh tế - xã hội của Việt Nam
+            qua các giai đoạn phát triển.
         </p>
 
     </div>
 
+    <div class="economic-image reveal">
 
-    <div class="chart reveal">
-<div class="chart-grid"></div>
-
-
-        <div class="bar-container">
-
-            <div class="bar-area"><div class="bar" data-height="25%"></div></div>
-
-            <div class="bar-label">1986</div>
-
-        </div>
-
-
-        <div class="bar-container">
-
-            <div class="bar-area"><div class="bar" data-height="35%"></div></div>
-
-            <div class="bar-label">1995</div>
-
-        </div>
-
-
-        <div class="bar-container">
-
-            <div class="bar-area"><div class="bar" data-height="50%"></div></div>
-
-            <div class="bar-label">2007</div>
-
-        </div>
-
-
-        <div class="bar-container">
-
-            <div class="bar-area"><div class="bar" data-height="65%"></div></div>
-
-            <div class="bar-label">2015</div>
-
-        </div>
-
-
-        <div class="bar-container">
-
-            <div class="bar-area"><div class="bar" data-height="80%"></div></div>
-
-            <div class="bar-label">2020</div>
-
-        </div>
-
-
-        <div class="bar-container">
-
-            <div class="bar-area"><div class="bar" data-height="95%"></div></div>
-
-            <div class="bar-label">Nay</div>
-
-        </div>
-
+        <img 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGizFHLFZXed7BUiDKo9lcZAjFcLrat19XsVm4UoLV8DFArV3grMAMb6Y&s=10"
+            alt="Hành trình vượt khó của Việt Nam sau 51 năm thống nhất đất nước"
+        >
 
     </div>
-
-
-    <p class="chart-note">
-        * Biểu đồ mang tính minh họa cho quá trình phát triển,
-        không phải số liệu GDP thực tế.
-    </p>
 
 </section>
 
@@ -908,7 +1226,7 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
 
 <!-- ================= TƯƠNG LAI ================= -->
 
-<section class="future" id="tuong-lai"><div class="future-box reveal">
+<section class="future" id="tuong-lai">
 
     <h2>
         Hướng tới tương lai
@@ -921,12 +1239,12 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
         và phát triển bền vững.
     </p>
 
-</div></section>
+</section>
 
 
 <!-- ================= KẾT LUẬN ================= -->
 
-<section class="conclusion">
+<section>
 
     <div class="section-title reveal">
 
@@ -957,7 +1275,7 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
     </p>
 
     <p>
-        © 2026 — Thiết kế phục vụ học tập
+        © 2026 — NHÓM 3 - LSĐ - LP6013.37
     </p>
 
 </footer>
@@ -965,35 +1283,134 @@ src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fi
 
 <!-- ================= JAVASCRIPT ================= -->
 
-<button class="to-top" aria-label="Lên đầu trang">↑</button>
 <script>
-const $=(q,c=document)=>[...c.querySelectorAll(q)];
-/* Ảnh online lỗi: ẩn biểu tượng ảnh hỏng để lộ hình vẽ nền (src gốc vẫn giữ nguyên) */
-const PX='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-function broken(i){if(i.dataset.b||!i.style.backgroundImage)return;i.dataset.b=1;i.alt='';i.src=PX}
-$('img').forEach(i=>{i.addEventListener('error',()=>broken(i));if(i.complete&&i.naturalWidth===0)broken(i)});
-/* Hiện dần khi cuộn (so le theo thứ tự trong cùng nhóm) */
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active');io.unobserve(e.target)}}),{threshold:.15});
-$('.reveal').forEach(el=>{const sib=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));
-  el.style.setProperty('--d',(sib.indexOf(el)%4)*.12+'s');io.observe(el)});
-/* Đếm số */
-const ease=t=>1-Math.pow(1-t,3);
-new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();
-  $('.counter').forEach(c=>{const to=+c.dataset.target,t0=performance.now();
-    (function tick(t){const p=Math.min((t-t0)/1800,1);c.textContent=Math.round(to*ease(p));if(p<1)requestAnimationFrame(tick)})(t0)})}),{threshold:.3}).observe($('.stats')[0]);
-/* Biểu đồ cột */
-new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();
-  $('.bar').forEach((b,i)=>{b.style.transitionDelay=i*.12+'s';b.style.height=b.dataset.height})}),{threshold:.3}).observe($('.chart')[0]);
-/* Menu: đánh dấu mục đang xem */
-const links=$('nav a');
-const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
-$('section[id]').forEach(s=>so.observe(s));
-/* Thanh tiến độ, nền menu, nút lên đầu */
-const navEl=$('nav')[0],bar=$('.progress')[0],topBtn=$('.to-top')[0];
-function onScroll(){const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
-  bar.style.width=(h>0?y/h*100:0)+'%';navEl.classList.toggle('scrolled',y>40);topBtn.classList.toggle('show',y>700)}
-addEventListener('scroll',onScroll,{passive:true});onScroll();
-topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+    /* Hiệu ứng xuất hiện khi cuộn */
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+
+        reveals.forEach(element => {
+
+            const windowHeight = window.innerHeight;
+
+            const elementTop =
+                element.getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - 100) {
+
+                element.classList.add("active");
+
+            }
+
+        });
+
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+
+    revealOnScroll();
+
+
+    /* Counter */
+
+    const counters =
+        document.querySelectorAll(".counter");
+
+    let counterStarted = false;
+
+    function startCounter() {
+
+        if (counterStarted) return;
+
+        const statsSection =
+            document.querySelector(".stats");
+
+        const position =
+            statsSection.getBoundingClientRect().top;
+
+        if (position < window.innerHeight - 100) {
+
+            counterStarted = true;
+
+            counters.forEach(counter => {
+
+                const target =
+                    +counter.getAttribute("data-target");
+
+                let current = 0;
+
+                const step = target / 100;
+
+                const timer = setInterval(() => {
+
+                    current += step;
+
+                    if (current >= target) {
+
+                        counter.innerText = target;
+
+                        clearInterval(timer);
+
+                    } else {
+
+                        counter.innerText =
+                            Math.floor(current);
+
+                    }
+
+                }, 15);
+
+            });
+
+        }
+
+    }
+
+    window.addEventListener("scroll", startCounter);
+
+
+    /* Chart animation */
+
+    let chartStarted = false;
+
+    function startChart() {
+
+        if (chartStarted) return;
+
+        const chart =
+            document.querySelector(".chart");
+
+        const position =
+            chart.getBoundingClientRect().top;
+
+        if (position < window.innerHeight - 100) {
+
+            chartStarted = true;
+
+            const bars =
+                document.querySelectorAll(".bar");
+
+            bars.forEach(bar => {
+
+                const height =
+                    bar.getAttribute("data-height");
+
+                setTimeout(() => {
+
+                    bar.style.height = height;
+
+                }, 200);
+
+            });
+
+        }
+
+    }
+
+    window.addEventListener("scroll", startChart);
+
 </script>
 
 </body>
